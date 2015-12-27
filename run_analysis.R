@@ -53,14 +53,14 @@ colnames(data_Subject_train) <- "Subject"
 colnames(data_Subject_test) <- "Subject"
 
 ## defining new column with variables "Dataset". This variable matches type of measurement (test or train)
-data_X_train <- as.data.frame(append(data_X_train, "train", after = 0))
-data_X_test <- as.data.frame(append(data_X_test, "test", after = 0))
-names(data_X_train)[1] <- "Dataset"
-names(data_X_test)[1] <- "Dataset"
+data_X_train <- as.data.frame(append(data_X_train_filtered, "train", after = 0))
+data_X_test <- as.data.frame(append(data_X_test_filtered, "test", after = 0))
+names(data_X_train_filtered)[1] <- "Dataset"
+names(data_X_test_filtered)[1] <- "Dataset"
 
 ## Creating combined datasets for train and for test data separately
-data_train <- cbind(data_Subject_train, data_Y_train, data_X_train)
-data_test <- cbind(data_Subject_test, data_Y_test, data_X_test)
+data_train <- cbind(data_Subject_train, data_Y_train, data_X_train_filtered)
+data_test <- cbind(data_Subject_test, data_Y_test, data_X_test_filtered)
 
 ## Creating combined dataset with data from test and train datasets
 data_summary <- rbind(data_train, data_test)
