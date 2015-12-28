@@ -9,10 +9,10 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 The dataset "data_mean" contains the next variables:
  - Subject, describes ID of a person who participated in the research. Type of data - numeric. Same to variable subject in the raw datasets.
  - Activity, describes type of activity of a person. Type of data - character. Possible values - WALKING, WALKING_UPSTAIRS, WALKING_DOWN STAIRS, SITTING, STANDING, LAYING. Same to activity labels in the raw datasets.
- - Block of data (see below). Type of data - numeric. 
+ - Block of data (see below). Type of data - numeric. Measurements unit - in standard gravity units 'g'.
 
 Block of data contains the average for each activity and each subject of the mean(Mean value) and the std(Standard deviation) for the next variables:
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions. 
  - tBodyAcc-XYZ
  - tGravityAcc-XYZ
  - tBodyAccJerk-XYZ
